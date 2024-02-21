@@ -1,0 +1,25 @@
+.badge-container {
+    /* position: relative; */
+    display: inline-block;
+    position: absolute;
+}
+
+.badge {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    transform: translateY(40px)
+}
+
+.pointer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 10px solid transparent;
+    /* border-right: 20px solid #FF5733; */
+    border-radius: 20px
+}
