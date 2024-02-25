@@ -8,10 +8,16 @@ function App() {
 
   const [socket, setSocket] = useState(null);
 
+  let BACKEND_URL = "http://localhost:4000";
+
+  if (process.env.NODE_ENV === 'production') {
+    BACKEND_URL = process.env.VITE_BACKEND_URL;
+  }
+
 
   function initializeSocket() {
     try {
-      const socketInstance = io("http://localhost:4000", {
+      const socketInstance = io(BACKEND_URL, {
         withCredentials: true,
       });
       setSocket(socketInstance);
