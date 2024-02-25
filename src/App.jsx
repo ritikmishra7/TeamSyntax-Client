@@ -10,8 +10,8 @@ function App() {
 
   let BACKEND_URL = "http://localhost:4000";
 
-  if (process.env.NODE_ENV === 'production') {
-    BACKEND_URL = process.env.VITE_BACKEND_URL;
+  if (import.meta.env.NODE_ENV === 'production') {
+    BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   }
 
 
